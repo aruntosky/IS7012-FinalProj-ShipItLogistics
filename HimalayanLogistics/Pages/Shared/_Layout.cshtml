@@ -5,31 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - HimalayanLogistics</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/HimalayanLogistics.styles.css" asp-append-version="true" />
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            box-shadow: 0 4px 2px -2px gray;
+        }
+
+        .main-section {
+            margin-top: 135px;
+        }
+
+        .upper-bar .navbar-nav {
+            justify-content: end;
+            flex-direction: row !important;
+        }
+
+        .upper-bar {
+            background-color: rgba(0,0,0,0.4);
+            padding: 0 5px;
+        }
+
+            .upper-bar .navbar-nav li {
+                margin-left: 10px;
+            }
+
+                .upper-bar .navbar-nav li a {
+                    color: white !important;
+                }
+
+        .navbar-collapse ul li {
+            border-bottom: 5px solid transparent;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+            .navbar-collapse ul li:hover {
+                border-bottom: 5px solid red;
+            }
+
+        header .navbar-collapse .nav-item {
+            width: 150px;
+            text-align: center;
+        }
+
+        .logo-img img {
+            width: 150px;
+            position: fixed;
+            top: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">HimalayanLogistics</a>
+        <div class="container">
+            <div class="upper-bar row">
+                <partial name="_LoginPartial" />
+
+            </div>
+            <a class="navbar-brand logo-img" asp-area="" asp-page="/Index"><img src="Logo.PNG" alt="" /></a>
+
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light ml-auto">
+
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                    <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Services</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Solutions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Insights & Trends</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Contact</a>
                         </li>
                     </ul>
-                    <partial name="_LoginPartial" />
                 </div>
-            </div>
-        </nav>
+
+            </nav>
+        </div>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
