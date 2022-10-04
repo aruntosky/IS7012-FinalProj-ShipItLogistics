@@ -28,7 +28,9 @@ namespace HimalayanLogistics.Pages.Customers
                 return NotFound();
             }
 
-            var customer = await _context.Customer.FirstOrDefaultAsync(m => m.CustomerId == id);
+            var customer = await _context.Customer.Include(x=> x.Shipments).
+                Include(y => y.Payments).
+                FirstOrDefaultAsync(m => m.CustomerId == id);
             if (customer == null)
             {
                 return NotFound();
