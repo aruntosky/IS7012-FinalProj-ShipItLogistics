@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HimalayanLogistics.Models
@@ -7,13 +8,17 @@ namespace HimalayanLogistics.Models
     {
         public int PaymentId { get; set; }
         [DisplayName("Transaction Number")]
+        [Required(ErrorMessage = "Transaction Number required")]
+
 
         public long TransactionNumber { get; set; }
         [DisplayName("Charges")]
 
 
+
         public decimal Amount { get; set; }
         [DisplayName("Payment Date")]
+        [DataType(DataType.Date)]
 
         public DateTime PaymentDate { get; set; }
         [DisplayName("Payment Mode")]
