@@ -11,9 +11,9 @@ namespace HimalayanLogistics.Models
         [DisplayName("Customer Name")]
         [Required(ErrorMessage = "Customer Name required")]
         public string CustomerName { get; set; }
-        [DisplayName("Contact Number")]
+        [DisplayName("Phone Number")]
         [Required(ErrorMessage = "Phone Number required")]
-        [Phone]
+        [RegularExpression("^([0-9]{10})$", ErrorMessage = "Invalid Phone Number.")]
         public long PhoneNumber { get; set; }
         [DisplayName("Email ID")]
         [Required(ErrorMessage = "Email required")]

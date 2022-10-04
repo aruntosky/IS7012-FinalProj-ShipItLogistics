@@ -14,9 +14,9 @@ namespace HimalayanLogistics.Models
         public DateTime ExpectedDeliveryDate { get; set; }
         [DisplayName("Tracking Number")]
         [Required(ErrorMessage = "Tracking Number required")]
+        [StringLength(10)]
 
-
-        public long TrackingNumber { get; set; }
+        public string TrackingNumber { get; set; }
         [DisplayName("Delivery Status")]
         [Required(ErrorMessage = "Delivery Stataus required")]
 

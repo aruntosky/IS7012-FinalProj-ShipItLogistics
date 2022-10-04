@@ -19,9 +19,11 @@ namespace HimalayanLogistics.Models
         public decimal Amount { get; set; }
         [DisplayName("Payment Date")]
         [DataType(DataType.Date)]
-
+        [Range(1,10000)]
+    
         public DateTime PaymentDate { get; set; }
         [DisplayName("Payment Mode")]
+        
 
         public string PaymentMode { get; set; }
         public Customer? Customer { get; set; }

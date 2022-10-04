@@ -36,7 +36,7 @@ namespace HimalayanLogistics.Pages.DeliveryTrackings
                 return NotFound();
             }
             DeliveryTracking = deliverytracking;
-           ViewData["ShipmentId"] = new SelectList(_context.Shipment, "ShipmentId", "ShipmentNumber");
+           ViewData["ShipmentId"] = new SelectList(_context.Shipment, "ShipmentId", "Destination");
             return Page();
         }
 

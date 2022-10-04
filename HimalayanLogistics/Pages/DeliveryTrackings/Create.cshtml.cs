@@ -21,7 +21,7 @@ namespace HimalayanLogistics.Pages.DeliveryTrackings
 
         public IActionResult OnGet()
         {
-        ViewData["ShipmentId"] = new SelectList(_context.Shipment, "ShipmentId", "ShipmentNumber");
+        ViewData["ShipmentId"] = new SelectList(_context.Shipment, "ShipmentId", "Destination");
             return Page();
         }
 

@@ -17,7 +17,7 @@ namespace HimalayanLogistics.Models
         public string Email { get; set; }
         [DisplayName("Contact Number")]
         [Required(ErrorMessage = "Contact Number is required")]
-        [Phone]
+        [RegularExpression("^([0-9]{10})$", ErrorMessage = "Invalid Contact Number.")]
 
         public long Contact { get; set; }
         public List<Shipment>? Shipments { get; set; }

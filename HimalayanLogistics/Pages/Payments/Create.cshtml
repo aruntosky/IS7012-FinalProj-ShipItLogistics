@@ -29,7 +29,14 @@
             </div>
             <div class="form-group">
                 <label asp-for="Payment.PaymentMode" class="control-label"></label>
-                <input asp-for="Payment.PaymentMode" class="form-control" />
+                <form action="#">
+                    <select name="languages" id="lang">
+                        <option value="Cash On Delivery">Cash On Delivery</option>
+                        <option value="Credit Card">Credit Card</option>
+                        <option value="PayPal">PayPal</option>                    
+                    </select>
+                </form>
+          <!--      <input asp-for="Payment.PaymentMode" class="form-control" /> -->
                 <span asp-validation-for="Payment.PaymentMode" class="text-danger"></span>
             </div>
             <div class="form-group">

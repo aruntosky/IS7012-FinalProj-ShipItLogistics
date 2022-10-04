@@ -19,6 +19,7 @@ namespace HimalayanLogistics.Models
         public string ShipmentType { get; set; }
         [DisplayName("Shipment Number")]
         [Required(ErrorMessage = "Shipment Number is required")]
+        [StringLength(10)]
 
 
         public int ShipmentNumber { get; set; }
