@@ -25,7 +25,6 @@
             </div>
             <div class="form-group">
                 <label asp-for="DeliveryTracking.DeliveryStatus" class="control-label"></label>
-                <form action="#">
                     <select name="languages" id="lang">
                         <option value="Label Created">Label Created</option>
                         <option value="Shipped/On the Way">Shipped/On the Way</option>
@@ -38,7 +37,6 @@
                         <option value="Exception">Exception</option>
 
                     </select>
-                </form>
                 <!--<input asp-for="DeliveryTracking.DeliveryStatus" class="form-control" />-->
                 <span asp-validation-for="DeliveryTracking.DeliveryStatus" class="text-danger"></span>
             </div>

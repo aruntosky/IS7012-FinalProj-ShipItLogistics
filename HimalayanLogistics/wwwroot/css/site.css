@@ -36,6 +36,10 @@ main form {
     font-weight: 500;
 }
 
+.form-group select {
+    width: 100%;
+}
+
     .form-group .btn {
         background-color: black;
         border-color: black;

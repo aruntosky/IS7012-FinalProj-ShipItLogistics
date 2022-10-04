@@ -19,7 +19,6 @@
             </div>
             <div class="form-group">
                 <label asp-for="Shipment.ShipmentType" class="control-label"></label>
-                <form action="#">
                     <select name="languages" id="lang">
                         <option value="International shipping">
                             International shipping
@@ -44,7 +43,6 @@
                             Pallet shipping
                         </option>
                     </select>
-                </form>
                 <!-- <input asp-for="Shipment.ShipmentType" class="form-control" />-->
                 <span asp-validation-for="Shipment.ShipmentType" class="text-danger"></span>
             </div>
