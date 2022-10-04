@@ -1,0 +1,80 @@
+﻿@page
+@model HimalayanLogistics.Pages.DeliveryTrackings.SearchModel
+
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>Search</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<div class="row">
+    <div class="col">
+        <form action="" method="get" class="form-inline">
+            <input asp-for="Query" class="form-control mr-sm-2 mb-2" placeholder="Search Tracking Number" />
+            <button type="submit" class="btn btn-primary mb-2">Search</button>
+        </form>
+    </div>
+</div>
+
+@if (Model.SearchCompleted)
+{
+    if (Model.DeliveryTracking.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DeliveryTracking[0].ExpectedDeliveryDate)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DeliveryTracking[0].TrackingNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DeliveryTracking[0].DeliveryStatus)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DeliveryTracking[0].Shipment)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model.DeliveryTracking) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ExpectedDeliveryDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TrackingNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DeliveryStatus)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Shipment.Destination)
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.DeliveryTrackingId">Edit</a> |
+                        <a asp-page="./Details" asp-route-id="@item.DeliveryTrackingId">Details</a> |
+                        <a asp-page="./Delete" asp-route-id="@item.DeliveryTrackingId">Delete</a>
+                    </td>
+                </tr>
+        }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-info">
+                    No results match your term <strong>@Model.Query</strong>
+                </div>
+            </div>
+        </div>
+    }
+}
