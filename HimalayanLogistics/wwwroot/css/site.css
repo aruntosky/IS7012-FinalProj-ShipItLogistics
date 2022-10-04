@@ -17,7 +17,7 @@ body {
   margin-bottom: 60px;
 }
 
-main form {
+main form:not(.deleteForm) {
     background: linear-gradient(#e66465, #9198e5);
     border-radius: 5px;
     padding: 20px;
@@ -47,6 +47,39 @@ main form {
         padding: 10px;
         color: white;
     }
+
+.accordion-button, .accordion-button:not(.collapsed) {
+    background-color: #eb1424;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.sub-pages-header {
+    background-image: url('../hero-img.jpg');
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+    .sub-pages-header h1 {
+        width: 100%;
+        background-color: rgba(0,0,0,0.4);
+        color: white;
+    }
+
+.red-color {
+    color: #eb1424;
+}
+.normal-text {
+    color: #adadad;
+    font-weight:500;
+}
 
 /*main {
     padding: 10px;
