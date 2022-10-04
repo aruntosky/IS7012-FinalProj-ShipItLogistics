@@ -16,6 +16,10 @@
         align-items: center;
     }
 
+    .hero-container .row {
+            padding: 0 20px;
+    }
+
     .discount-add-container {
         display: flex;
         justify-content: center;
@@ -26,7 +30,7 @@
         margin-bottom: 50px;
     }
 
-    .item-container {
+    .item-container{
         color: white;
     }
 
@@ -35,56 +39,96 @@
         border-radius: 5px;
         padding: 20px;
     }
-
-        .track-order a, .discount-offer a {
+    .track-order a, .discount-offer a {
             background-color: #eb1424;
             border-color: #eb1424;
-            width: 100%;
-            padding: 10px;
-        }
+            width:100%;
+            padding:10px;
+    }
 
     .discount-offer h1 {
         color: #eb1424;
-        font-weight: 800;
+        font-weight:800;
     }
 
     .discount-offer p {
         color: #eb1424;
-        line-height: 30px;
-        font-weight: 500;
+        line-height:30px;
+        font-weight:500;
     }
 
     .discount-offer {
-        display: flex;
-        flex-direction: column;
+        display:flex;
+        flex-direction:column;
     }
 
     .track-order input {
         margin: 20px 0;
-        padding: 10px;
+        padding:10px;
+    }
+    .advantages-list-content {
+        text-align:center;
+        color: #eb1424;
+        font-weight:500;
+        font-size:30px;
     }
 
-    .advantages-list-content {
-        text-align: center;
-        color: #eb1424;
-        font-weight: 500;
-        font-size: 30px;
+    .service {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:300px;
+        border: 1px solid red;
+        position:relative;
+        margin-bottom:20px;
+    }
+
+    .service-1 {
+        background-image: url('service-1.jpg');
+    }
+    .service-2 {
+        background-image: url('service-2.jpg');
+    }
+    .service-3 {
+        background-image: url('service-3.jpg');
+    }
+    .service-4 {
+        background-image: url('service-4.jpg');
+    }
+    .service-5 {
+        background-image: url('service-5.jpg');
+    }
+    .service-6 {
+        background-image: url('service-6.jpg');
+    }
+
+    .service-link {
+        padding:10px;
+        text-align:center;
+        background-color: #eb1424;
+        color: white;
+        font-weight:500;
+        font-size:20px;
+        text-decoration:none;
+        position:absolute;
+        bottom:0;
+        left:0;
     }
 
 </style>
 <div class="hero-container mb-50">
     <div class="container item-container">
         <div class="row">
-            <div class="heading-text justify-content-center col-sm-6">
-                <h1>Reliable Trucking and Transportation Services.</h1>
-                <h4>Logistic Solutions for Your Successful Business</h4>
-            </div>
-            <div class="col-sm-2"></div>
-            <div class="track-order justify-content-center col-sm-4">
-                <h2>Track Your Order</h2>
+        <div class="heading-text justify-content-center col-sm-6">
+            <h1>Reliable Trucking and Transportation Services.</h1>
+            <h4>Logistic Solutions for Your Successful Business</h4>
+        </div>
+        <div class="col-sm-2"></div>
+        <div class="track-order justify-content-center col-sm-4">
+            <h2>Track Your Order</h2>
                 <input type="text" class="form-control" placeholder="Tracking Number">
-                <a class="btn btn-primary mb-3" asp-area="" asp-page="/Privacy" asp-route-trackingNum="10">Track</a>
-            </div>
+                    <a class="btn btn-primary mb-3" asp-area="" asp-page="/DeliveryTrackings/Index" asp-route-trackingNum="10">Track</a>
+        </div>
         </div>
     </div>
 
@@ -92,7 +136,7 @@
 <div class="container discount-add-container mb-50">
     <div class="row">
         <div class="col-sm-7">
-            <img src="./hero-img2.jpg" alt="" width="100%" />
+            <img src="./hero-img2.jpg" alt="" width="100%"/>
         </div>
         <div class="col-sm-5 justify-content-center discount-offer">
             <h1 class="color-red">Save Upto 40% </h1>
@@ -104,7 +148,7 @@
     </div>
 </div>
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="moto-cell col-sm-12" data-container="container">
             <div class="moto-widget moto-widget-row row-fixed moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
@@ -258,6 +302,44 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="advantages-list-content moto-widget-text-editable">
+        <span class="moto-text_system_7" style="text-align: center;"><h2>Our Services</h2></span>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <div class="service-1 service">
+                <a href="/services/" class="service-link"><span class="moto-widget-button-label">Road Transportation</span></a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="service-2 service">
+                <a href="/services/" class="service-link"><span class="moto-widget-button-label">Sea Freight</span></a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="service-3 service">
+                <a href="/services/" class="service-link"><span class="moto-widget-button-label">Air Freight</span></a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="service-4 service">
+                <a href="/services/" class="service-link"><span class="moto-widget-button-label">Logistic Solutions</span></a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="service-5 service">
+                <a href="/services/" class="service-link"><span class="moto-widget-button-label">Warehousing Solutions</span></a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="service-6 service">
+                <a href="/services/" class="service-link"><span class="moto-widget-button-label">TruckLoad Services</span></a>
             </div>
         </div>
     </div>
