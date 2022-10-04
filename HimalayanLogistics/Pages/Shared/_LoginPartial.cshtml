@@ -5,9 +5,19 @@
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {
-    <li class="nav-item">
-        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
-    </li>
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Hello @User.Identity?.Name!
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" asp-page="/Shipments/Index">Shipments</a></li>
+                <li><a class="dropdown-item" asp-page="/DeliveryTrackings/Index">DeliveryTrackings</a></li>
+                <li><a class="dropdown-item" asp-page="/Payments/Index">Payments</a></li>
+                <li><a class="dropdown-item" asp-page="/Customers/Index">Customers</a></li>
+                <li><a class="dropdown-item" asp-page="/Employees/Index">Employees</a></li>
+            </ul>
+        </div>
     <li class="nav-item">
         <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post" >
                 <button type="submit" class="nav-link btn btn-link" style="color:#eb1424">Logout</button>

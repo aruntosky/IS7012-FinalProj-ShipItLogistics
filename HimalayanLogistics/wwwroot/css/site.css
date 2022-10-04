@@ -16,3 +16,39 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+main form {
+    background: linear-gradient(#e66465, #9198e5);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.form-group input, .form-group select {
+    padding: 10px;
+    border:1px solid black;
+}
+.form-group {
+    margin-bottom:15px;
+}
+.form-group label {
+    font-size:20px;
+    margin-bottom:10px;
+    font-weight: 500;
+}
+
+    .form-group .btn {
+        background-color: black;
+        border-color: black;
+        width: 100%;
+        padding: 10px;
+        color: white;
+    }
+
+/*main {
+    padding: 10px;
+    min-height: 500px;
+    background-image: url('../hero-img.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
