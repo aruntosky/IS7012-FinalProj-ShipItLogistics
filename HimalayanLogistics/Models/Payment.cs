@@ -13,13 +13,13 @@ namespace HimalayanLogistics.Models
 
         public long TransactionNumber { get; set; }
         [DisplayName("Charges")]
+        [Range(1, 10000)]
 
 
 
         public decimal Amount { get; set; }
         [DisplayName("Payment Date")]
         [DataType(DataType.Date)]
-        [Range(1,10000)]
     
         public DateTime PaymentDate { get; set; }
         [DisplayName("Payment Mode")]
