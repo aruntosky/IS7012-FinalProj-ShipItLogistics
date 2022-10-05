@@ -28,7 +28,8 @@ namespace HimalayanLogistics.Pages.DeliveryTrackings
                 return NotFound();
             }
 
-            var deliverytracking = await _context.DeliveryTracking.FirstOrDefaultAsync(m => m.DeliveryTrackingId == id);
+            var deliverytracking = await _context.DeliveryTracking.Include(x => x.Shipment).
+                FirstOrDefaultAsync(m => m.DeliveryTrackingId == id);
             if (deliverytracking == null)
             {
                 return NotFound();

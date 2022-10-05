@@ -28,7 +28,8 @@ namespace HimalayanLogistics.Pages.Payments
                 return NotFound();
             }
 
-            var payment = await _context.Payment.FirstOrDefaultAsync(m => m.PaymentId == id);
+            var payment = await _context.Payment.Include(x => x.Shipment).
+                Include(y => y.Customer).FirstOrDefaultAsync(m => m.PaymentId == id);
             if (payment == null)
             {
                 return NotFound();

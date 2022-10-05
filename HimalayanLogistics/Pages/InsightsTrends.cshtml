@@ -1,10 +1,11 @@
 ﻿@page
-@model HimalayanLogistics.Pages.InsightsTrendsModel
+@model HimalayanLogistics.Pages.StatisticsModel
+
 @{
 }
 
 <style> 
-        .carousel-caption h2
+    .carousel-caption h2
 
     {
         color: white; 
@@ -13,8 +14,17 @@
     .carousel-caption p
     {
         color: white;
- 
 
+    }
+
+    .badge {
+        color: black;
+        font-size: 20px;
+    }
+
+    .list-group {
+        background-color: black;
+        color: white;
     }
 </style>
 <div id="Marketing" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -66,3 +76,19 @@
 </div>
 <br />
 
+<h4>Platform Statistics</h4>
+
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        Total Shipments
+        <span class="badge badge-primary badge-pill">@Model.TotalShipments</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        Total DeliveryTrackings
+        <span class="badge badge-primary badge-p111">@Model.TotalDeliveryTrackings</span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        Total Customers
+        <span class="badge badge-primary badge-p111">@Model.TotalCustomers</span>
+    </li>
+</ul>

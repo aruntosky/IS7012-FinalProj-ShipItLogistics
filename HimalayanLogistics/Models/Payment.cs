@@ -32,7 +32,7 @@ namespace HimalayanLogistics.Models
         public int CustomerId { get; set; }
         [ForeignKey("ShipmentId")]
         public Shipment? Shipment { get; set; }
-        [DisplayName("Transaction Number")]
+        [DisplayName("Shipment Number")]
 
         public int? ShipmentId { get; set; }
     }

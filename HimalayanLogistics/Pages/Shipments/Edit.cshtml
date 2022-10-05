@@ -5,7 +5,7 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Update Shipment Information</h1>
+<h1>Update Shipment</h1>
 
 <hr />
 <div class="row">
@@ -20,31 +20,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Shipment.ShipmentType" class="control-label"></label>
-                <!-- <input asp-for="Shipment.ShipmentType" class="form-control" />-->
-                    <select name="languages" id="lang">
-                        <option value="International shipping">
-                            International shipping
-                        </option>
-                        <option value="Parcel shipping (Small Package Shipping)">
-                            Parcel shipping (Small Package Shipping)
-                        </option>
-                        <option value="Boat transport / Sea shipping">
-                            Boat transport / Sea shipping
-                        </option>
-                        <option value="Truck / trailer service">
-                            Truck / trailer service
-                        </option>
-                        <option value="Haulage">Haulage</option>
-                        <option value="Pallet shipping">
-                            Pallet shipping
-                        </option>
-                        <option value="Expedited Freight">
-                            Expedited Freight
-                        </option>
-                        <option value="Pallet shipping">
-                            Pallet shipping
-                        </option>
-                    </select>
+                <input asp-for="Shipment.ShipmentType" class="form-control" />
                 <span asp-validation-for="Shipment.ShipmentType" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -90,7 +66,7 @@
 </div>
 
 <div>
-    <a asp-page="./Index" class="btn btn-dark mt-3">Back to List</a>
+    <a asp-page="./Index">Back to List</a>
 </div>
 
 @section Scripts {

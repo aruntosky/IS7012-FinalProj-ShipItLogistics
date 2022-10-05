@@ -29,7 +29,8 @@ namespace HimalayanLogistics.Pages.Shipments
                 return NotFound();
             }
 
-            var shipment = await _context.Shipment.FirstOrDefaultAsync(m => m.ShipmentId == id);
+            var shipment = await _context.Shipment.Include(x => x.Employee).
+                Include(y => y.Customer).FirstOrDefaultAsync(m => m.ShipmentId == id);
 
             if (shipment == null)
             {

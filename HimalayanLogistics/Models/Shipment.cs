@@ -22,7 +22,7 @@ namespace HimalayanLogistics.Models
         [StringLength(10)]
 
 
-        public int ShipmentNumber { get; set; }
+        public string ShipmentNumber { get; set; }
         [DisplayName("Pickup Location")]
         [Required(ErrorMessage = "Pickup Location is required")]
 

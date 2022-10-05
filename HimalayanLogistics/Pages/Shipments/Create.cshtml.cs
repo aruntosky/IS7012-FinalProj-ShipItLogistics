@@ -21,8 +21,8 @@ namespace HimalayanLogistics.Pages.Shipments
 
         public IActionResult OnGet()
         {
-        ViewData["CustomerId"] = new SelectList(_context.Customer, "CustomerId", "CustomerId");
-        ViewData["EmployeeId"] = new SelectList(_context.Employee, "EmployeeId", "EmployeeId");
+        ViewData["CustomerId"] = new SelectList(_context.Customer, "CustomerId", "CustomerName");
+        ViewData["EmployeeId"] = new SelectList(_context.Employee, "EmployeeId", "Email");
             return Page();
         }
 

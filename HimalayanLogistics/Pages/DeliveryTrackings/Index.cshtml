@@ -5,7 +5,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>List of Delivery's</h1>
 
 <p>
     <a asp-page="Create" class="btn btn-success">Create New</a>
@@ -41,7 +41,7 @@
                 @Html.DisplayFor(modelItem => item.DeliveryStatus)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Shipment.Destination)
+                @Html.DisplayFor(modelItem => item.Shipment.ShipmentNumber)
             </td>
             <td>
                     <a asp-page="./Edit" asp-route-id="@item.DeliveryTrackingId" class="btn btn-secondary">Edit</a> |
