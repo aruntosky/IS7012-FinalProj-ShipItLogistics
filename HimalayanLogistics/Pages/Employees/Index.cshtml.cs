@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using HimalayanLogistics.Data;
 using HimalayanLogistics.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HimalayanLogistics.Pages.Employees
 {
+    //[Authorize(Roles = "employee")]
     public class IndexModel : PageModel
     {
         private readonly HimalayanLogistics.Data.ApplicationDbContext _context;

@@ -7,7 +7,7 @@ namespace HimalayanLogistics.Models
     public class Payment
     {
         public int PaymentId { get; set; }
-        [DisplayName("Transaction Number")]
+        [DisplayName("Payment Transaction Number")]
         [Required(ErrorMessage = "Transaction Number required")]
 
 
